@@ -1,0 +1,78 @@
+﻿@using Data;
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">SMOK3</a>
+@*        <button title="Navigation menu" class="navbar-toggler">
+            <span class="navbar-toggler-icon"></span>
+        </button>*@
+    </div>
+</div>
+<div>
+    <nav class="flex-column">
+        @foreach (var game in Games)
+        {
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="@game.GameId">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> @game.Title
+                </NavLink>
+            </div>
+        }
+        @*        <div class="nav-item px-3">
+        <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+        <span class="oi oi-home" aria-hidden="true"></span> Home
+        </NavLink>
+        </div>
+        <div class="nav-item px-3">
+        <NavLink class="nav-link" href="games">
+        <span class="oi oi-list-rich" aria-hidden="true"></span> Games
+        </NavLink>
+        </div>
+        <div class="nav-item px-3">
+        <NavLink class="nav-link" href="marketplace">
+        <span class="oi oi-list-rich" aria-hidden="true"></span> Marketplace
+        </NavLink>
+        </div>
+        <div class="nav-item px-3">
+        <NavLink class="nav-link" href="battlepass">
+        <span class="oi oi-list-rich" aria-hidden="true"></span> Battlepass
+        </NavLink>
+        </div>*@
+    </nav>
+</div>
+
+@code {
+    public List<Data.Game> Games = new List<Data.Game>()
+    {
+        new Data.Game()
+        {
+            Title = "Laundry Day 2 : Spin Cycle of Blood",
+            GameId = "e76c758d-3a14-4806-9faa-5fd302b53b12",
+            ReleaseDate = "2023-03-23"
+        },
+        new Data.Game()
+        {
+            Title = "Accountant's Revenge",
+            GameId = "29dcad88-3629-44ae-ad2a-5991270d67d2",
+        },
+        new Data.Game()
+        {
+            Title = "Curse Words with Friends",
+            GameId = "1abf8cbf-a59a-4af9-8d73-126cb207b6a5",
+            ReleaseDate = "2022-04-15"
+        },
+        new Data.Game()
+        {
+            Title = "Curse Word Champions",
+            GameId = "0e93c7f5-17fd-48e2-a49e-6b06c817a2de",
+            ReleaseDate = "2022-04-15"
+        },
+        new Data.Game()
+        {
+            Title = "VCR Repair Arena",
+            GameId = "30ae29d8-c880-4744-8b4c-1d0f3173b2a3",
+            ReleaseDate = "2020-05-26"
+        },
+    };
+
+}
