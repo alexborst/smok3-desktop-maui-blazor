@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="desktop-maui-blazor.app/desktop-maui-blazor">
+      <BCSymbolMapName>desktop-maui-blazor.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>desktop-maui-blazor.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>/Users/alexanderborst/Desktop/Development/SourceControl/SMOK3/smok3-desktop-maui-blazor/obj/Debug/net7.0-ios/iossimulator-x64/mtouch-symbols.list</SymbolFile>
+      <DSymName>desktop-maui-blazor.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/alexanderborst/Desktop/Development/SourceControl/SMOK3/smok3-desktop-maui-blazor</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>

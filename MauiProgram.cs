@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using desktop_maui_blazor.Data;
+using desktop_maui_blazor.Services;
 
 namespace desktop_maui_blazor;
 
@@ -23,6 +24,7 @@ public static class MauiProgram
 #endif
 
 		builder.Services.AddSingleton<WeatherForecastService>();
+		builder.Services.AddSingleton<GameService>();
 
 		return builder.Build();
 	}

@@ -1,4 +1,8 @@
 ﻿@using Data;
+@using System.Linq;
+@using desktop_maui_blazor.Services
+@using desktop_maui_blazor.Data.GraphQL
+@inject GameService _gameService
 
 <div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
@@ -10,11 +14,12 @@
 </div>
 <div>
     <nav class="flex-column">
-        @foreach (var game in Games)
-        {
+        @foreach (var game in Games2)
+            {
+                String link = $"/gameDetails/{game.Id}";
             <div class="nav-item px-3">
-                <NavLink class="nav-link" href="@game.GameId">
-                    <span class="oi oi-list-rich" aria-hidden="true"></span> @game.Title
+                <NavLink class="nav-link" href="@link">
+                    <span class="oi oi-list-rich" aria-hidden="true">@game.Title</span> 
                 </NavLink>
             </div>
         }
@@ -42,6 +47,7 @@
 </div>
 
 @code {
+    public List<GraphQLData.Game> Games2 = new List<GraphQLData.Game>();
     public List<Data.Game> Games = new List<Data.Game>()
     {
         new Data.Game()
@@ -75,4 +81,13 @@
         },
     };
 
+    
+    protected override async Task OnInitializedAsync()
+    {
+        Console.WriteLine("Fetching Games from game service...");
+        var result = await _gameService.GetUserGames("7598b330-35bf-4c0f-b5a8-c83dd2c37c37");
+        Games2 = result;
+        Console.WriteLine($"Games: {Games2.ToString()}");
+    }
+    
 }

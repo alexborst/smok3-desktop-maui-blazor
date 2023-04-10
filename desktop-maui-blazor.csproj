@@ -31,6 +31,9 @@
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
     </PropertyGroup>
 
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+      <CreatePackage>false</CreatePackage>
+    </PropertyGroup>
     <ItemGroup>
         <!-- App Icon -->
         <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
@@ -51,6 +54,23 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+        <PackageReference Include="GraphQL.Client" Version="5.1.1" />
+        <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft" Version="5.1.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Platforms\Android\Resources\values\" />
+      <None Remove="Models\" />
+      <None Remove="Services\" />
+      <None Remove="Data\GraphQL\" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Platforms\Android\Resources\values\" />
+      <Folder Include="Models\" />
+      <Folder Include="Services\" />
+      <Folder Include="Data\GraphQL\" />
+    </ItemGroup>
+    <ItemGroup>
+      <AndroidResource Remove="Platforms\Android\Resources\values\colors.xml" />
+    </ItemGroup>
 </Project>

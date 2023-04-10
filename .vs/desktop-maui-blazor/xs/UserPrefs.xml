@@ -1,0 +1,62 @@
+﻿<Properties StartupConfiguration="{31BE4B98-2608-469D-9DE0-EF251FD6C0E2}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="wwwroot/css/bootstrap/bootstrap.min.css">
+    <Files>
+      <File FileName="Platforms/MacCatalyst/AppDelegate.cs" Line="10" Column="1" />
+      <File FileName="Platforms/MacCatalyst/Program.cs" Line="1" Column="1" />
+      <File FileName="App.xaml.cs" Line="11" Column="1" />
+      <File FileName="MauiProgram.cs" Line="32" Column="1" />
+      <File FileName="Platforms/Android/AndroidManifest.xml" />
+      <File FileName="wwwroot/css/app.css" Line="1" Column="39" />
+      <File FileName="wwwroot/css/bootstrap/bootstrap.min.css" Line="6" Column="66500" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="desktop-maui-blazor" expanded="True">
+            <Node name="desktop-maui-blazor" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Data" expanded="True">
+                <Node name="GraphQL" expanded="True" />
+              </Node>
+              <Node name="Platforms" expanded="True">
+                <Node name="Android" expanded="True" />
+                <Node name="iOS" expanded="True" />
+                <Node name="MacCatalyst" expanded="True" />
+                <Node name="Tizen" expanded="True" />
+                <Node name="Windows" expanded="True">
+                  <Node name="App.xaml" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Services" expanded="True" />
+              <Node name="Shared" expanded="True">
+                <Node name="MainLayout.razor" expanded="True" />
+                <Node name="NavMenu.razor" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True">
+                  <Node name="bootstrap" expanded="True">
+                    <Node name="bootstrap.min.css" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>response</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.desktop-maui-blazor PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
